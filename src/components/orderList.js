@@ -3,14 +3,15 @@ import Icons from "../controls/icons";
 
 const OrderListMain = styled.div`
     display: grid;
-    grid-template-columns: auto auto auto; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
 `;
 
 const OrderListContainer = styled.div`
     width: 200px;
+    height: 200px;
     background-color: #ffffff;
-    box-shadow: 0px 1px 16px 0px rgb(0 0 0 / 8%), 0px 3px 1px -2px rgb(0 0 0 / 5%),
-    0px 6px 16px 0px rgb(0 0 0 / 10%);
+    box-shadow: 0px 1px 16px 0px rgb(0 0 0 / 8%), 0px 3px 1px -2px rgb(0 0 0 / 5%), 0px 6px 16px 0px rgb(0 0 0 / 10%);
     border-radius: 16px;
     margin: 0px 0 10px 0;
     padding: 15px;
