@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Icons from "../controls/icons";
+import { useNavigate } from "react-router-dom";
 
 const OrderListMain = styled.div`
     display: grid;
@@ -27,6 +28,7 @@ const OrderOptions = styled.div`
 `;
 
 const OrderList = () => {
+    const navigate = useNavigate();
     return (
         <OrderListMain>
             {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((val) => {
@@ -42,7 +44,9 @@ const OrderList = () => {
                             </div>
                         </OrderListData>
                         <OrderOptions>
-                            <Icons name="eye" /> <Icons name="edit" />
+                            <span onClick={() => {navigate("/view-order")}}>
+                                <Icons name="eye" />
+                            </span> <Icons name="edit" />
                         </OrderOptions>
                     </OrderListContainer>
                 )

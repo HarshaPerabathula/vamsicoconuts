@@ -108,15 +108,11 @@ const CreateOrder = () => {
         setQuantity([ ...newSet ]);
     }
 
-    const handleDelete = () => {
+    const handleDelete = (i) => {
         const newSet = [...quantity];
-        newSet.splice(1, 1);
+        newSet.splice(i, 1);
         setQuantity([ ...newSet ]);
     }
-
-    // const quantityList = useMemo(() => {
-    //     quantity.
-    // }, [quantity]);
 
     return (
         <OrderListContainer>

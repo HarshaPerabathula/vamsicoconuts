@@ -4,8 +4,6 @@ import Icons from "../controls/icons";
 import { useNavigate } from "react-router-dom";
 
 const FooterContainer = styled.div`
-    position: fixed;
-    bottom: 0;
     background-color: #ffffff;
     padding: 10px 50px;
     box-shadow: 0px 1px 16px 0px rgb(0 0 0 / 8%), 0px 3px 1px -2px rgb(0 0 0 / 5%), 0px 6px 16px 0px rgb(0 0 0 / 10%);
@@ -13,6 +11,9 @@ const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
     font-size: 16px;
+    z-index: 9;
+    bottom: 0;
+    position: fixed;
 `;
 
 const Footer = () => {

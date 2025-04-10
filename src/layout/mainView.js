@@ -8,8 +8,11 @@ import Orders from "../pages/orders";
 import CreateOrder from "../components/createOrder";
 import CreatePurchase from "../components/createPurchase";
 import Footer from "./footer";
+import ViewOrder from "../components/viewOrder";
 
 const MainViewDesign = styled.div`
+    width: 100%;
+
     @media (max-width: 768px) {
         .footer-styles {
             display: "";
@@ -26,6 +29,8 @@ const MainViewContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  padding: 0 0 50px 0;
 `;
 
 const Main = styled.div`
@@ -47,14 +52,13 @@ const MainView = () => {
                     <Route path="/settings" element={<p>Settings</p>}></Route>
                     <Route path="/create-order" element={<CreateOrder />}></Route>
                     <Route path="/create-purchase" element={<CreatePurchase />}></Route>
+                    <Route path="/view-order" element={<ViewOrder/>}></Route>
                 </Routes>
-                {/* <div className="footer-styles"><Footer /></div> */}
-                <Footer />
+                <div className="footer-styles">
+                    <Footer></Footer>
+                </div>
             </Main>
         </MainViewContainer>
-        {/* <div className="footer-styles">
-            <Footer />
-        </div> */}
     </MainViewDesign>
   );
 };
